@@ -376,6 +376,59 @@ body.in-fullscreen .floating-fs-exit {
   }
 }
 
+/* Virtual Game Mode Landscape (Guaranteed Landscape on iPhone / Mobile) */
+.slide-viewer.game-mode-landscape {
+  position: fixed !important;
+  top: 0 !important;
+  left: 100vw !important;
+  width: 100vh !important;
+  height: 100vw !important;
+  transform: rotate(90deg) !important;
+  transform-origin: 0 0 !important;
+  z-index: 999999 !important;
+  overflow: hidden !important;
+  background: #000000 !important;
+}
+
+.slide-viewer.game-mode-landscape .viewer-header {
+  display: none !important;
+}
+
+.slide-viewer.game-mode-landscape .floating-fs-exit {
+  display: flex !important;
+  top: 14px !important;
+  right: 14px !important;
+}
+
+.slide-viewer.game-mode-landscape .slide-stage {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  background: #000000 !important;
+  padding: 0 !important;
+}
+
+.slide-viewer.game-mode-landscape .slide-frame {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.slide-viewer.game-mode-landscape .slide-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+.slide-viewer.game-mode-landscape .viewer-progress {
+  bottom: 0 !important;
+}
+
 .text-lime { color: var(--lime); }
 
 .viewer-counter {

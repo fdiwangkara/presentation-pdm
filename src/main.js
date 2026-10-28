@@ -111,6 +111,15 @@ class PdmApp {
     document.addEventListener('fullscreenchange', () => this.handleFullscreenChange());
     document.addEventListener('webkitfullscreenchange', () => this.handleFullscreenChange());
 
+    // When phone is naturally held horizontal, exit virtual rotation
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > window.innerHeight) {
+        const viewer = document.getElementById('slideViewer');
+        viewer?.classList.remove('game-mode-landscape');
+        document.body.classList.remove('in-game-landscape');
+      }
+    });
+
     // Lock
     document.getElementById('btnLock')?.addEventListener('click', () => this.lock());
 
@@ -291,31 +300,59 @@ class PdmApp {
   next() { this.goTo(this.currentIndex + 1); }
 
   async toggleFullscreen() {
-    const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
-    if (!isFs) {
+    const viewer = document.getElementById('slideViewer');
+    const isVirtual = viewer?.classList.contains('game-mode-landscape');
+    const isNativeFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+
+    if (isVirtual || isNativeFs) {
+      this.exitFullscreenMode();
+      return;
+    }
+
+    const isPortrait = window.innerHeight > window.innerWidth;
+    let orientationLocked = false;
+
+    // 1. Try native fullscreen (Android / Desktop)
+    const el = document.documentElement;
+    try {
+      if (el.requestFullscreen) {
+        await el.requestFullscreen();
+      } else if (el.webkitRequestFullscreen) {
+        await el.webkitRequestFullscreen();
+      }
+    } catch (err) {}
+
+    // 2. Try Screen Orientation API (Android Chrome / modern web apps)
+    if (screen.orientation && screen.orientation.lock) {
       try {
-        const el = document.documentElement;
-        if (el.requestFullscreen) {
-          await el.requestFullscreen();
-        } else if (el.webkitRequestFullscreen) {
-          await el.webkitRequestFullscreen();
-        }
-        // Mobile Game Mode: lock orientation to landscape
-        if (screen.orientation && screen.orientation.lock) {
-          await screen.orientation.lock('landscape').catch(() => {});
-        }
+        await screen.orientation.lock('landscape');
+        orientationLocked = true;
       } catch (err) {}
-    } else {
-      try {
-        if (screen.orientation && screen.orientation.unlock) {
-          try { screen.orientation.unlock(); } catch {}
-        }
-        if (document.exitFullscreen) {
-          await document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          await document.webkitExitFullscreen();
-        }
-      } catch (err) {}
+    }
+
+    // 3. Universal Fallback for iOS / Mobile portrait where orientation lock API is restricted:
+    // Rotate into game-mode landscape via CSS transform
+    if (isPortrait && !orientationLocked) {
+      viewer?.classList.add('game-mode-landscape');
+      document.body.classList.add('in-game-landscape');
+    }
+  }
+
+  exitFullscreenMode() {
+    const viewer = document.getElementById('slideViewer');
+    viewer?.classList.remove('game-mode-landscape');
+    document.body.classList.remove('in-game-landscape');
+
+    if (screen.orientation && screen.orientation.unlock) {
+      try { screen.orientation.unlock(); } catch (err) {}
+    }
+
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
     }
   }
 
@@ -324,12 +361,18 @@ class PdmApp {
     document.body.classList.toggle('in-fullscreen', isFs);
     document.getElementById('slideViewer')?.classList.toggle('in-fullscreen', isFs);
 
-    if (!isFs && screen.orientation && screen.orientation.unlock) {
-      try { screen.orientation.unlock(); } catch {}
+    if (!isFs) {
+      const viewer = document.getElementById('slideViewer');
+      viewer?.classList.remove('game-mode-landscape');
+      document.body.classList.remove('in-game-landscape');
+      if (screen.orientation && screen.orientation.unlock) {
+        try { screen.orientation.unlock(); } catch (err) {}
+      }
     }
   }
 
   lock() {
+    this.exitFullscreenMode();
     sessionStorage.removeItem('pdm_session_pin');
     this.slides = [];
     this.currentIndex = 0;
