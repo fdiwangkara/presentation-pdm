@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>PDM Material - foreal.dsgn</title>
+  <meta name="description" content="Materi Interaktif PDM Mentoring: Variable, Pseudocode, Flowchart, IPO Chart, dan DFD Chart (80 Slide).">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Google Fonts: Bricolage Grotesque & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/styles/index.css">
+</head>
+<body>
+  <!-- Noise Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Passcode Gate (iOS / Clean Banking Design) -->
+  <div id="pinGate" class="pin-gate active" role="dialog" aria-modal="true" aria-labelledby="pinTitle">
+    <div class="passcode-card" id="passcodeCard">
+      <!-- Minimalist Header with unadorned FR Logo -->
+      <div class="passcode-header">
+        <div class="passcode-logo">
+          <svg width="36" height="36" viewBox="0 0 336 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="310" cy="311" r="26" fill="#BDE64E"/>
+            <path d="M32 134.668V308.668H64V133.668H110.594H161.668C186.168 133.668 186.168 162 186.168 169.668C184.284 205.091 150.005 204.834 130.154 204.686C128.934 204.677 127.769 204.668 126.668 204.668V236.668L222.668 336.668H271.668L168.668 234.668C207.068 222.668 217.332 186.5 217.668 169.668C218.552 125.5 181.168 102.668 161.668 102.668H110.594H64C55.6 31.8679 105.167 26.5013 131 32.668V0.667974C42.6 -7.73199 28.1666 65.168 32 102.668H0V134.668H32Z" fill="url(#pcode_grad)"/>
+            <defs>
+              <linearGradient id="pcode_grad" x1="-129" y1="-182" x2="277" y2="-3" gradientUnits="userSpaceOnUse">
+                <stop offset="0.58" stop-color="#1246A2"/>
+                <stop offset="0.78" stop-color="#BDE64E"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h1 id="pinTitle" class="passcode-title">Enter your passcode</h1>
+      </div>
+
+      <!-- Passcode Dots (4 Minimal Circles) -->
+      <div class="passcode-dots" id="pinDisplay" tabindex="0" role="button" aria-label="Passcode display">
+        <span class="p-dot" data-index="0"></span>
+        <span class="p-dot" data-index="1"></span>
+        <span class="p-dot" data-index="2"></span>
+        <span class="p-dot" data-index="3"></span>
+      </div>
+
+      <!-- Hidden physical input for keyboard entry -->
+      <input type="password" id="pinHiddenInput" class="pin-hidden-input" maxlength="4" autocomplete="one-time-code" inputmode="numeric" pattern="[0-9]*" autofocus>
+
+      <!-- Error / Status Message -->
+      <div id="pinStatus" class="pin-status" aria-live="polite"></div>
+
+      <!-- Pill Shaped Keypad matching reference image -->
+      <div class="passcode-keypad" id="pinKeypad">
+        <button type="button" class="pill-btn" data-val="1">1</button>
+        <button type="button" class="pill-btn" data-val="2">2</button>
+        <button type="button" class="pill-btn" data-val="3">3</button>
+
+        <button type="button" class="pill-btn" data-val="4">4</button>
+        <button type="button" class="pill-btn" data-val="5">5</button>
+        <button type="button" class="pill-btn" data-val="6">6</button>
+
+        <button type="button" class="pill-btn" data-val="7">7</button>
+        <button type="button" class="pill-btn" data-val="8">8</button>
+        <button type="button" class="pill-btn" data-val="9">9</button>
+
+        <div class="keypad-spacer" aria-hidden="true"></div>
+        <button type="button" class="pill-btn" data-val="0">0</button>
+        <button type="button" class="pill-btn pill-btn-action" id="keyBackspace" aria-label="Backspace">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+            <line x1="18" y1="9" x2="12" y2="15"/>
+            <line x1="12" y1="9" x2="18" y2="15"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide Viewer (visible after PIN unlock) -->
+  <div id="slideViewer" class="slide-viewer hidden">
+    <!-- Top Bar -->
+    <header class="viewer-header">
+      <a href="https://forealdsgn.vercel.app" target="_blank" rel="noopener noreferrer" class="viewer-brand" title="Buka forealdsgn.vercel.app" aria-label="Foreal Design Website">
+        <svg width="24" height="24" viewBox="0 0 336 337" fill="none">
+          <circle cx="310" cy="311" r="26" fill="#BDE64E"/>
+          <path d="M32 134.668V308.668H64V133.668H110.594H161.668C186.168 133.668 186.168 162 186.168 169.668C184.284 205.091 150.005 204.834 130.154 204.686C128.934 204.677 127.769 204.668 126.668 204.668V236.668L222.668 336.668H271.668L168.668 234.668C207.068 222.668 217.332 186.5 217.668 169.668C218.552 125.5 181.168 102.668 161.668 102.668H110.594H64C55.6 31.8679 105.167 26.5013 131 32.668V0.667974C42.6 -7.73199 28.1666 65.168 32 102.668H0V134.668H32Z" fill="url(#hdr_grad)"/>
+          <defs>
+            <linearGradient id="hdr_grad" x1="-129" y1="-182" x2="277" y2="-3" gradientUnits="userSpaceOnUse">
+              <stop offset="0.58" stop-color="#1246A2"/>
+              <stop offset="0.78" stop-color="#BDE64E"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+
+      <div class="viewer-counter">
+        <span id="slideCounter">1 / 80</span>
+      </div>
+
+      <div class="viewer-actions">
+        <a href="/PDM-Mentoring.pdf" download="PDM-Mentoring-Materi.pdf" class="viewer-icon-btn viewer-download-btn" id="btnDownload" title="Download PDF Materi (80 Slide)" aria-label="Download PDF Materi">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </a>
+        <button type="button" class="viewer-icon-btn" id="btnFullscreen" title="Fullscreen">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+          </svg>
+        </button>
+        <button type="button" class="viewer-icon-btn viewer-lock-btn" id="btnLock" title="Kunci Materi">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Slide Stage -->
+    <main class="slide-stage">
+      <!-- Prev Click Zone -->
+      <button type="button" class="nav-zone nav-zone-prev" id="btnPrev" aria-label="Slide Sebelumnya">
+        <div class="nav-zone-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </div>
+      </button>
+
+      <!-- Slide Image -->
+      <div class="slide-frame">
+        <img id="slideImg" class="slide-image" src="" alt="Slide" draggable="false">
+        <div id="slideLoader" class="slide-loader">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <!-- Next Click Zone -->
+      <button type="button" class="nav-zone nav-zone-next" id="btnNext" aria-label="Slide Selanjutnya">
+        <div class="nav-zone-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </button>
+    </main>
+
+    <!-- Bottom Progress -->
+    <div class="viewer-progress">
+      <div class="progress-track" id="progressTrack">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

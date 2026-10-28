@@ -1,0 +1,1378 @@
+[
+  {
+    "id": 1,
+    "title": "PDM",
+    "module": "Overview",
+    "image": "/slides/slide_01.webp",
+    "thumbnail": "/thumbnails/thumb_01.webp",
+    "lines": [
+      "PDM",
+      "Mentoring",
+      "m i d t e r m b a s e d l e a r n i n g",
+      "026",
+      "2026",
+      "2026"
+    ],
+    "full_text": "PDM \nMentoring\nm i d t e r m b a s e d l e a r n i n g\n026\n2026\n2026",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 2,
+    "title": "1",
+    "module": "Overview",
+    "image": "/slides/slide_02.webp",
+    "thumbnail": "/thumbnails/thumb_02.webp",
+    "lines": [
+      "1",
+      "Cara tahu variable",
+      "dan tipe data yang",
+      "dibutuhin.",
+      "Variable",
+      "What will y’all learn?",
+      "4",
+      "IPO Chart",
+      "Apasih IPO Chart",
+      "sama cara buatnya",
+      "dengan mudah.",
+      "2",
+      "Pseudocode",
+      "Gimana cara ubah",
+      "ke pseudocode",
+      "yang rapih",
+      "3",
+      "Flowchart",
+      "Cara bikin flowchart",
+      "yang bener deh",
+      "pokoknya",
+      "5",
+      "DFD Chart",
+      "Ngebuat DFD Chart",
+      "level 0 yang mudah",
+      "dipahami."
+    ],
+    "full_text": "1\nCara tahu variable \ndan tipe data yang \ndibutuhin.\nVariable\nWhat will y’all learn?\n4\nIPO Chart\nApasih IPO Chart \nsama cara buatnya \ndengan mudah.\n2\nPseudocode\nGimana cara ubah \nke pseudocode \nyang rapih\n3\nFlowchart\nCara bikin flowchart \nyang bener deh \npokoknya\n5\nDFD Chart\nNgebuat DFD Chart \nlevel 0 yang mudah \ndipahami.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 3,
+    "title": "Why choose us?",
+    "module": "Overview",
+    "image": "/slides/slide_03.webp",
+    "thumbnail": "/thumbnails/thumb_03.webp",
+    "lines": [
+      "Why choose us?"
+    ],
+    "full_text": "Why choose us?",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 4,
+    "title": "#1 VARIABLE",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_04.webp",
+    "thumbnail": "/thumbnails/thumb_04.webp",
+    "lines": [
+      "#1",
+      "VARIABLE"
+    ],
+    "full_text": "#1\nVARIABLE",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 5,
+    "title": "Variable",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_05.webp",
+    "thumbnail": "/thumbnails/thumb_05.webp",
+    "lines": [
+      "Variable",
+      "A variable is a named storage location used to hold data",
+      "that a program can access and manipulate.",
+      "Dalam bahasa sederhana, variabel adalah tempat untuk menyimpan",
+      "data yang dibutuhkan program.",
+      "name",
+      "“Budi”",
+      "age",
+      "20"
+    ],
+    "full_text": "Variable\nA variable is a named storage location used to hold data \nthat a program can access and manipulate.\nDalam bahasa sederhana, variabel adalah tempat untuk menyimpan \ndata yang dibutuhkan program.\nname\n“Budi”\nage\n20",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 6,
+    "title": "Variable",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_06.webp",
+    "thumbnail": "/thumbnails/thumb_06.webp",
+    "lines": [
+      "Variable",
+      "Data Types"
+    ],
+    "full_text": "Variable\nData Types",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 7,
+    "title": "Variable",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_07.webp",
+    "thumbnail": "/thumbnails/thumb_07.webp",
+    "lines": [
+      "Variable",
+      "25",
+      "Integer",
+      "85.5",
+      "Real",
+      "“Budi”",
+      "String",
+      "True",
+      "Boolean",
+      "Integer",
+      "Bilangan bulat, seperti jumlah barang atau umur.",
+      "Real",
+      "Bilangan yang dapat memiliki desimal, seperti rata-rata nilai.",
+      "String",
+      "Teks, seperti nama mahasiswa.",
+      "Boolean",
+      "Nilai logika yang hanya memiliki dua kemungkinan: True atau False."
+    ],
+    "full_text": "Variable\n25\nInteger\n85.5\nReal\n“Budi”\nString\nTrue\nBoolean\nInteger\nBilangan bulat, seperti jumlah barang atau umur.\nReal\nBilangan yang dapat memiliki desimal, seperti rata-rata nilai.\nString\nTeks, seperti nama mahasiswa.\nBoolean\nNilai logika yang hanya memiliki dua kemungkinan: True atau False.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 8,
+    "title": "Variable",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_08.webp",
+    "thumbnail": "/thumbnails/thumb_08.webp",
+    "lines": [
+      "Variable",
+      "Global vs Local",
+      "Variables"
+    ],
+    "full_text": "Variable\nGlobal vs Local \nVariables",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 9,
+    "title": "Variable",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_09.webp",
+    "thumbnail": "/thumbnails/thumb_09.webp",
+    "lines": [
+      "Variable",
+      "GLOBAL",
+      "Bisa diakses dari beberapa bagian program sesuai scope.",
+      "Function A",
+      "Local: score = 50",
+      "Function B",
+      "Local: score = 80",
+      "Dua variabel local bisa memakai nama yang sama tanpa otomatis menjadi variabel yang sama."
+    ],
+    "full_text": "Variable\nGLOBAL\nBisa diakses dari beberapa bagian program sesuai scope.\nFunction A\nLocal: score = 50\nFunction B\nLocal: score = 80\nDua variabel local bisa memakai nama yang sama tanpa otomatis menjadi variabel yang sama.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 10,
+    "title": "Variable",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_10.webp",
+    "thumbnail": "/thumbnails/thumb_10.webp",
+    "lines": [
+      "Variable",
+      "Contoh Global dan",
+      "Local"
+    ],
+    "full_text": "Variable\nContoh Global dan \nLocal",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 11,
+    "title": "Variable",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_11.webp",
+    "thumbnail": "/thumbnails/thumb_11.webp",
+    "lines": [
+      "Variable",
+      "DECLARE GLOBAL passMark = 65",
+      "FUNCTION calculate()",
+      "DECLARE LOCAL score = 80",
+      "DISPLAY score",
+      "END FUNCTION",
+      "passMark merupakan global variable.",
+      "score merupakan local variable dalam fungsi calculate.",
+      "score tidak otomatis dapat diakses dari luar fungsi",
+      "tersebut."
+    ],
+    "full_text": "Variable\nDECLARE GLOBAL passMark = 65\n\nFUNCTION calculate()\n    DECLARE LOCAL score = 80\n    DISPLAY score\nEND FUNCTION\npassMark merupakan global variable.\nscore merupakan local variable dalam fungsi calculate.\nscore tidak otomatis dapat diakses dari luar fungsi \ntersebut.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 12,
+    "title": "Study Case: Study Case Variable",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_12.webp",
+    "thumbnail": "/thumbnails/thumb_12.webp",
+    "lines": [
+      "Study Case Variable",
+      "DECLARE namaKampus AS STRING =",
+      "\"BINUS\"",
+      "FUNCTION tampilkanData()",
+      "DECLARE nama AS STRING = \"Radith\"",
+      "DECLARE umur AS INTEGER = 20",
+      "DISPLAY nama",
+      "DISPLAY umur",
+      "DISPLAY namaKampus",
+      "END FUNCTION",
+      "Syarat:",
+      "Identifikasi semua variabel dalam program!",
+      "Tentukan tipe data setiap variabel!",
+      "Tentukan variabel mana yang global dan mana yang local!"
+    ],
+    "full_text": "Study Case Variable\nDECLARE namaKampus AS STRING = \n\"BINUS\"\n\nFUNCTION tampilkanData()\n    DECLARE nama AS STRING = \"Radith\"\n    DECLARE umur AS INTEGER = 20\n\n    DISPLAY nama\n    DISPLAY umur\n    DISPLAY namaKampus\nEND FUNCTION\nSyarat:\nIdentifikasi semua variabel dalam program!\nTentukan tipe data setiap variabel!\nTentukan variabel mana yang global dan mana yang local!",
+    "is_study_case": true,
+    "is_answer": false
+  },
+  {
+    "id": 13,
+    "title": "Solusi: Jawabannya:",
+    "module": "#1 VARIABLE",
+    "image": "/slides/slide_13.webp",
+    "thumbnail": "/thumbnails/thumb_13.webp",
+    "lines": [
+      "Jawabannya:",
+      "GLOBAL:",
+      "namaKampus → STRING",
+      "LOCAL:",
+      "nama → STRING",
+      "umur → INTEGER"
+    ],
+    "full_text": "Jawabannya:\nGLOBAL:\nnamaKampus → STRING\nLOCAL:\nnama → STRING\numur → INTEGER",
+    "is_study_case": false,
+    "is_answer": true
+  },
+  {
+    "id": 14,
+    "title": "#2 PSEUDOCODE",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_14.webp",
+    "thumbnail": "/thumbnails/thumb_14.webp",
+    "lines": [
+      "#2",
+      "PSEUDOCODE"
+    ],
+    "full_text": "#2\nPSEUDOCODE",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 15,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_15.webp",
+    "thumbnail": "/thumbnails/thumb_15.webp",
+    "lines": [
+      "Pseudocode",
+      "Resep",
+      "Instruksi sehari-hari",
+      "Pseudocode",
+      "Logika terstruktur",
+      "Program",
+      "Kode bahasa pemrograman"
+    ],
+    "full_text": "Pseudocode\nResep\nInstruksi sehari-hari\nPseudocode\nLogika terstruktur\nProgram\nKode bahasa pemrograman",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 16,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_16.webp",
+    "thumbnail": "/thumbnails/thumb_16.webp",
+    "lines": [
+      "Pseudocode",
+      "Anatomy of",
+      "Pseudocode"
+    ],
+    "full_text": "Pseudocode\nAnatomy of \nPseudocode",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 17,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_17.webp",
+    "thumbnail": "/thumbnails/thumb_17.webp",
+    "lines": [
+      "Pseudocode",
+      "INPUT",
+      "Menerima data",
+      "INPUT name",
+      "Analogi: menanyakan nama kepada pelanggan."
+    ],
+    "full_text": "Pseudocode\nINPUT\nMenerima data\nINPUT name\nAnalogi: menanyakan nama kepada pelanggan.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 18,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_18.webp",
+    "thumbnail": "/thumbnails/thumb_18.webp",
+    "lines": [
+      "Pseudocode",
+      "PROCESS",
+      "Mengolah data",
+      "total = price * quantity",
+      "Analogi: menghitung total belanja."
+    ],
+    "full_text": "Pseudocode\nPROCESS\nMengolah data\ntotal = price * quantity\nAnalogi: menghitung total belanja.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 19,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_19.webp",
+    "thumbnail": "/thumbnails/thumb_19.webp",
+    "lines": [
+      "Pseudocode",
+      "DISPLAY",
+      "Menampilkan hasil",
+      "DISPLAY total",
+      "Analogi: kasir menyebutkan total belanja."
+    ],
+    "full_text": "Pseudocode\nDISPLAY\nMenampilkan hasil\nDISPLAY total\nAnalogi: kasir menyebutkan total belanja.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 20,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_20.webp",
+    "thumbnail": "/thumbnails/thumb_20.webp",
+    "lines": [
+      "Pseudocode",
+      "Three Control",
+      "Structures"
+    ],
+    "full_text": "Pseudocode\nThree Control \nStructures",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 21,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_21.webp",
+    "thumbnail": "/thumbnails/thumb_21.webp",
+    "lines": [
+      "Pseudocode",
+      "Sequence"
+    ],
+    "full_text": "Pseudocode\nSequence",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 22,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_22.webp",
+    "thumbnail": "/thumbnails/thumb_22.webp",
+    "lines": [
+      "Pseudocode",
+      "Selection"
+    ],
+    "full_text": "Pseudocode\nSelection",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 23,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_23.webp",
+    "thumbnail": "/thumbnails/thumb_23.webp",
+    "lines": [
+      "Pseudocode",
+      "Repetition",
+      "SAMPAI WAKTU",
+      "HABIS"
+    ],
+    "full_text": "Pseudocode\nRepetition\nSAMPAI WAKTU\nHABIS",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 24,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_24.webp",
+    "thumbnail": "/thumbnails/thumb_24.webp",
+    "lines": [
+      "Pseudocode",
+      "Selection: IF / ELSE"
+    ],
+    "full_text": "Pseudocode\nSelection: IF / ELSE",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 25,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_25.webp",
+    "thumbnail": "/thumbnails/thumb_25.webp",
+    "lines": [
+      "Pseudocode",
+      "Studi kasus",
+      "sistem menentukan apakah",
+      "mahasiswa lulus berdasarkan nilai",
+      "minimal 65.",
+      "START",
+      "INPUT score",
+      "IF score >= 65 THEN",
+      "DISPLAY \"Lulus\"",
+      "ELSE",
+      "DISPLAY \"Tidak lulus\"",
+      "END IF",
+      "END"
+    ],
+    "full_text": "Pseudocode\nStudi kasus\nsistem menentukan apakah \nmahasiswa lulus berdasarkan nilai \nminimal 65.\nSTART\nINPUT score\n\nIF score >= 65 THEN\n    DISPLAY \"Lulus\"\nELSE\n    DISPLAY \"Tidak lulus\"\nEND IF\n\nEND",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 26,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_26.webp",
+    "thumbnail": "/thumbnails/thumb_26.webp",
+    "lines": [
+      "Pseudocode",
+      "80",
+      "score ≥ 65?",
+      "50"
+    ],
+    "full_text": "Pseudocode\n80\nscore ≥ 65?\n50",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 27,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_27.webp",
+    "thumbnail": "/thumbnails/thumb_27.webp",
+    "lines": [
+      "Pseudocode",
+      "Hal yang perlu ditekankan",
+      ">= berarti lebih besar dari atau sama dengan.",
+      "Nilai 65 tetap dinyatakan lulus.",
+      "ELSE dijalankan ketika kondisi IF bernilai False.",
+      "END IF menandai berakhirnya blok keputusan."
+    ],
+    "full_text": "Pseudocode\nHal yang perlu ditekankan\n>= berarti lebih besar dari atau sama dengan.\nNilai 65 tetap dinyatakan lulus.\nELSE dijalankan ketika kondisi IF bernilai False.\nEND IF menandai berakhirnya blok keputusan.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 28,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_28.webp",
+    "thumbnail": "/thumbnails/thumb_28.webp",
+    "lines": [
+      "Pseudocode",
+      "Repetition: LOOP"
+    ],
+    "full_text": "Pseudocode\nRepetition: LOOP",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 29,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_29.webp",
+    "thumbnail": "/thumbnails/thumb_29.webp",
+    "lines": [
+      "Pseudocode",
+      "Misalnya, program meminta",
+      "pengguna memasukkan PIN",
+      "sampai PIN yang benar",
+      "dimasukkan.",
+      "INPUT pin",
+      "WHILE pin != 1234",
+      "DISPLAY \"PIN salah, coba lagi\"",
+      "INPUT pin",
+      "END WHILE",
+      "DISPLAY \"Login berhasil\""
+    ],
+    "full_text": "Pseudocode\nMisalnya, program meminta \npengguna memasukkan PIN \nsampai PIN yang benar \ndimasukkan.\nINPUT pin\n\nWHILE pin != 1234\n    DISPLAY \"PIN salah, coba lagi\"\n    INPUT pin\nEND WHILE\n\nDISPLAY \"Login berhasil\"",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 30,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_30.webp",
+    "thumbnail": "/thumbnails/thumb_30.webp",
+    "lines": [
+      "Pseudocode",
+      "Masukkan PIN",
+      "PIN benar?"
+    ],
+    "full_text": "Pseudocode\nMasukkan PIN\nPIN benar?",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 31,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_31.webp",
+    "thumbnail": "/thumbnails/thumb_31.webp",
+    "lines": [
+      "Pseudocode",
+      "Pseudocode untuk",
+      "Menu Program"
+    ],
+    "full_text": "Pseudocode\nPseudocode untuk \nMenu Program",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 32,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_32.webp",
+    "thumbnail": "/thumbnails/thumb_32.webp",
+    "lines": [
+      "Pseudocode",
+      "Studi kasus",
+      "Program nilai mahasiswa",
+      "menyediakan menu untuk",
+      "mencatat nilai, melihat nilai,",
+      "menghitung rata-rata, atau keluar.",
+      "START",
+      "DO",
+      "DISPLAY \"1. Record Score\"",
+      "DISPLAY \"2. View Scores\"",
+      "DISPLAY \"3. Calculate Average\"",
+      "DISPLAY \"0. Exit\"",
+      "INPUT menuOption",
+      "IF menuOption == 1 THEN",
+      "CALL recordScore()",
+      "ELSE IF menuOption == 2 THEN",
+      "CALL viewScores()",
+      "ELSE IF menuOption == 3 THEN",
+      "CALL avgSubject()",
+      "ELSE IF menuOption != 0 THEN",
+      "DISPLAY \"Invalid option\"",
+      "END IF",
+      "WHILE menuOption != 0",
+      "END"
+    ],
+    "full_text": "Pseudocode\nStudi kasus\nProgram nilai mahasiswa \nmenyediakan menu untuk \nmencatat nilai, melihat nilai, \nmenghitung rata-rata, atau keluar.\nSTART\n\nDO\n    DISPLAY \"1. Record Score\"\n    DISPLAY \"2. View Scores\"\n    DISPLAY \"3. Calculate Average\"\n    DISPLAY \"0. Exit\"\n\n    INPUT menuOption\n\n    IF menuOption == 1 THEN\n        CALL recordScore()\n    ELSE IF menuOption == 2 THEN\n        CALL viewScores()\n    ELSE IF menuOption == 3 THEN\n        CALL avgSubject()\n    ELSE IF menuOption != 0 THEN\n        DISPLAY \"Invalid option\"\n    END IF\n\nWHILE menuOption != 0\n\nEND",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 33,
+    "title": "Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_33.webp",
+    "thumbnail": "/thumbnails/thumb_33.webp",
+    "lines": [
+      "Pseudocode",
+      "Catatan",
+      "CALL recordScore() berarti menjalankan",
+      "fungsi yang bertugas mencatat nilai.",
+      "IF memilih fungsi berdasarkan pilihan",
+      "pengguna.",
+      "WHILE menuOption != 0 mengulang menu",
+      "selama pilihan bukan 0.",
+      "0 menjadi kondisi berhenti."
+    ],
+    "full_text": "Pseudocode\nCatatan\nCALL recordScore() berarti menjalankan \nfungsi yang bertugas mencatat nilai.\nIF memilih fungsi berdasarkan pilihan \npengguna.\nWHILE menuOption != 0 mengulang menu \nselama pilihan bukan 0.\n0 menjadi kondisi berhenti.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 34,
+    "title": "Study Case: Study Case Pseudocode",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_34.webp",
+    "thumbnail": "/thumbnails/thumb_34.webp",
+    "lines": [
+      "Study Case Pseudocode",
+      "Soal: Buat pseudocode untuk menghitung rata-rata tiga nilai",
+      "mahasiswa. Jika rata-rata minimal 65, tampilkan Lulus; jika kurang dari",
+      "65, tampilkan Tidak lulus",
+      "Syarat:",
+      "Terima tiga nilai sebagai input.",
+      "Hitung rata-rata.",
+      "Tentukan status kelulusan.",
+      "Tampilkan rata-rata dan statusnya"
+    ],
+    "full_text": "Study Case Pseudocode\nSoal: Buat pseudocode untuk menghitung rata-rata tiga nilai \nmahasiswa. Jika rata-rata minimal 65, tampilkan Lulus; jika kurang dari \n65, tampilkan Tidak lulus\n\nSyarat:\nTerima tiga nilai sebagai input.\nHitung rata-rata.\nTentukan status kelulusan.\nTampilkan rata-rata dan statusnya",
+    "is_study_case": true,
+    "is_answer": false
+  },
+  {
+    "id": 35,
+    "title": "START",
+    "module": "#2 PSEUDOCODE",
+    "image": "/slides/slide_35.webp",
+    "thumbnail": "/thumbnails/thumb_35.webp",
+    "lines": [
+      "START",
+      "INPUT score1, score2, score3",
+      "average = (score1 + score2 + score3) / 3",
+      "IF average >= 65 THEN",
+      "status = \"Lulus\"",
+      "ELSE",
+      "status = \"Tidak lulus\"",
+      "END IF",
+      "DISPLAY average, status",
+      "END"
+    ],
+    "full_text": "START\n\nINPUT score1, score2, score3\n\naverage = (score1 + score2 + score3) / 3\n\nIF average >= 65 THEN\n    status = \"Lulus\"\nELSE\n    status = \"Tidak lulus\"\nEND IF\n\nDISPLAY average, status\n\nEND",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 36,
+    "title": "#3 FLOWCHART",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_36.webp",
+    "thumbnail": "/thumbnails/thumb_36.webp",
+    "lines": [
+      "#3",
+      "FLOWCHART",
+      "step sebelum kalian mulai coding"
+    ],
+    "full_text": "#3\nFLOWCHART\nstep sebelum kalian mulai coding",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 37,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_37.webp",
+    "thumbnail": "/thumbnails/thumb_37.webp",
+    "lines": [
+      "flowchart",
+      "Definisi singkat",
+      "Flowchart (atau diagram alur) adalah representasi visual dari langkah-langkah,",
+      "keputusan, dan urutan suatu proses atau program dari awal hingga akhir sebelum",
+      "kalian mulai mempraktekan kedalam aplikasi yang mau dibuat.",
+      "❓❓"
+    ],
+    "full_text": "flowchart\nDefinisi singkat\nFlowchart (atau diagram alur) adalah representasi visual dari langkah-langkah, \nkeputusan, dan urutan suatu proses atau program dari awal hingga akhir sebelum \nkalian mulai mempraktekan kedalam aplikasi yang mau dibuat.\n❓❓",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 38,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_38.webp",
+    "thumbnail": "/thumbnails/thumb_38.webp",
+    "lines": [
+      "flowchart",
+      "flowchart itu sama kayak kalian masak tapi ada kalian",
+      "gambarin langkah-langkah membuat makananya dalam",
+      "bentuk diagram yang berurutan.",
+      "Ibarat",
+      "🍽"
+    ],
+    "full_text": "flowchart\nflowchart itu sama kayak kalian masak tapi ada kalian \ngambarin langkah-langkah membuat makananya dalam \nbentuk diagram yang berurutan. \nIbarat\n🍽",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 39,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_39.webp",
+    "thumbnail": "/thumbnails/thumb_39.webp",
+    "lines": [
+      "flowchart",
+      "Symbol - symbol",
+      "flowchart",
+      "🧩"
+    ],
+    "full_text": "flowchart\nSymbol - symbol\nflowchart\n🧩",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 40,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_40.webp",
+    "thumbnail": "/thumbnails/thumb_40.webp",
+    "lines": [
+      "flowchart",
+      "1 st"
+    ],
+    "full_text": "flowchart\n1 st",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 41,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_41.webp",
+    "thumbnail": "/thumbnails/thumb_41.webp",
+    "lines": [
+      "flowchart",
+      "Capsule/kapsul",
+      "Real namenya: Terminal",
+      "Fungsinya: Bener-bener pure cuman buat start sama end",
+      "doang jadi pasti ada 2 dalam flowchart kalian."
+    ],
+    "full_text": "flowchart\nCapsule/kapsul\nReal namenya: Terminal\nFungsinya: Bener-bener pure cuman buat start sama end \ndoang jadi pasti ada 2 dalam flowchart kalian.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 42,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_42.webp",
+    "thumbnail": "/thumbnails/thumb_42.webp",
+    "lines": [
+      "flowchart",
+      "2 nd"
+    ],
+    "full_text": "flowchart\n2 nd",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 43,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_43.webp",
+    "thumbnail": "/thumbnails/thumb_43.webp",
+    "lines": [
+      "flowchart",
+      "Rectangle/Persegi panjang",
+      "Real namenya: Process",
+      "Fungsinya: Untuk melakukan pekerjaan atau tindakan. Jadi",
+      "misal kayak mesin cuci lagi proses mencuci atau chef yang lagi",
+      "masak kangkung.",
+      "Biasa dipakai: Proses operasi, eksekusi fungsi, menampilkan",
+      "halaman, verifikasi, dll."
+    ],
+    "full_text": "flowchart\nRectangle/Persegi panjang\nReal namenya: Process\nFungsinya: Untuk melakukan pekerjaan atau tindakan. Jadi \nmisal kayak mesin cuci lagi proses mencuci atau chef yang lagi \nmasak kangkung.\n\nBiasa dipakai: Proses operasi, eksekusi fungsi, menampilkan \nhalaman, verifikasi, dll.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 44,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_44.webp",
+    "thumbnail": "/thumbnails/thumb_44.webp",
+    "lines": [
+      "flowchart",
+      "3 rd"
+    ],
+    "full_text": "flowchart\n3 rd",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 45,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_45.webp",
+    "thumbnail": "/thumbnails/thumb_45.webp",
+    "lines": [
+      "flowchart",
+      "Rhombus/Belah ketupat",
+      "Real namenya: Decisions",
+      "Fungsinya: Untuk nentuin langkah selanjutnya jika syarat",
+      "tertentu terpenuhi atau gak. Ibarat if else atau for loop lah kalo",
+      "dalam coding.",
+      "Biasa dipakai: Pada halaman login jika login berhasil atau gak,",
+      "verifikasi pembayaran sukses atau gak, dll."
+    ],
+    "full_text": "flowchart\nRhombus/Belah ketupat\nReal namenya: Decisions\nFungsinya: Untuk nentuin langkah selanjutnya jika syarat \ntertentu terpenuhi atau gak. Ibarat if else atau for loop lah kalo \ndalam coding.\n\nBiasa dipakai: Pada halaman login jika login berhasil atau gak, \nverifikasi pembayaran sukses atau gak, dll.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 46,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_46.webp",
+    "thumbnail": "/thumbnails/thumb_46.webp",
+    "lines": [
+      "flowchart",
+      "4th"
+    ],
+    "full_text": "flowchart\n4th",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 47,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_47.webp",
+    "thumbnail": "/thumbnails/thumb_47.webp",
+    "lines": [
+      "flowchart",
+      "Arrow/Tanda panah",
+      "Real namenya: Flow lines",
+      "Fungsinya: Nunjukin arah langkah kemana selanjutnya jadi",
+      "ibarat kayak google maps mau nentuin tujuan kalian kemana",
+      "selanjutnya.",
+      "Biasa dipakai: tentu aja selalu dipake buat nyambungin antar",
+      "shape."
+    ],
+    "full_text": "flowchart\nArrow/Tanda panah\nReal namenya: Flow lines\nFungsinya: Nunjukin arah langkah kemana selanjutnya jadi \nibarat kayak google maps mau nentuin tujuan kalian kemana \nselanjutnya.\n\nBiasa dipakai: tentu aja selalu dipake buat nyambungin antar \nshape.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 48,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_48.webp",
+    "thumbnail": "/thumbnails/thumb_48.webp",
+    "lines": [
+      "flowchart",
+      "5th"
+    ],
+    "full_text": "flowchart\n5th",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 49,
+    "title": "flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_49.webp",
+    "thumbnail": "/thumbnails/thumb_49.webp",
+    "lines": [
+      "flowchart",
+      "Parallelogram/jajar genjang",
+      "Real namenya: Input/output",
+      "Fungsinya: Buat tempat masukkin data kedalam suatu variable",
+      "atau buat keluarin hasil dari suatu proses.",
+      "Biasa dipakai: Misal user disuruh input username itu jatuhnya",
+      "pake jajar genjang, terus kalkulator nampilin hasil operator gitu."
+    ],
+    "full_text": "flowchart\nParallelogram/jajar genjang\nReal namenya: Input/output\nFungsinya: Buat tempat masukkin data kedalam suatu variable \natau buat keluarin hasil dari suatu proses.\n\nBiasa dipakai: Misal user disuruh input username itu jatuhnya \npake jajar genjang, terus kalkulator nampilin hasil operator gitu.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 50,
+    "title": "Study Case: Study Case Flowchart",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_50.webp",
+    "thumbnail": "/thumbnails/thumb_50.webp",
+    "lines": [
+      "Study Case Flowchart",
+      "Tema: Beli Barang Online 🛒",
+      "Bikin alur kalo orang klik tombol \"Beli\" di aplikasi:",
+      "Cek Stok: Kalau barang habis →Gagal. Kalau ada →Hitung harga.",
+      "Cek Diskon: Kalau pakai voucher →Potong harga.",
+      "Cek Saldo: Kalau uang kurang → Gagal. Kalau cukup → Potong saldo &",
+      "stok, lalu sukses!"
+    ],
+    "full_text": "Study Case Flowchart\nTema: Beli Barang Online 🛒\n\nBikin alur kalo orang klik tombol \"Beli\" di aplikasi:\nCek Stok: Kalau barang habis →Gagal. Kalau ada →Hitung harga.\nCek Diskon: Kalau pakai voucher →Potong harga.\nCek Saldo: Kalau uang kurang → Gagal. Kalau cukup → Potong saldo & \nstok, lalu sukses!",
+    "is_study_case": true,
+    "is_answer": false
+  },
+  {
+    "id": 51,
+    "title": "Slide 51",
+    "module": "#3 FLOWCHART",
+    "image": "/slides/slide_51.webp",
+    "thumbnail": "/thumbnails/thumb_51.webp",
+    "lines": [],
+    "full_text": "",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 52,
+    "title": "#4 IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_52.webp",
+    "thumbnail": "/thumbnails/thumb_52.webp",
+    "lines": [
+      "#4",
+      "IPO Chart",
+      "apa yang di masukkan, prosesnya, hasilnya"
+    ],
+    "full_text": "#4\nIPO Chart\napa yang di masukkan, prosesnya, hasilnya",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 53,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_53.webp",
+    "thumbnail": "/thumbnails/thumb_53.webp",
+    "lines": [
+      "IPO Chart",
+      "Definisi singkat",
+      "IPO Chart (Input-Process-Output Chart) adalah model atau diagram berbentuk",
+      "tabel yang digunakan untuk merancang dan menganalisis cara kerja suatu sistem",
+      "atau program komputer.",
+      "❓❓"
+    ],
+    "full_text": "IPO Chart\nDefinisi singkat\nIPO Chart (Input-Process-Output Chart) adalah model atau diagram berbentuk \ntabel yang digunakan untuk merancang dan menganalisis cara kerja suatu sistem \natau program komputer.\n❓❓",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 54,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_54.webp",
+    "thumbnail": "/thumbnails/thumb_54.webp",
+    "lines": [
+      "IPO Chart",
+      "Mesin kopi, jadi inputnya itu biji kopi gula ama air terus",
+      "prosesnya itu mesin espressonya nyeduh kopi sama nggiling",
+      "baru outputnya itu kopi yang siap mu minum",
+      "Ibarat",
+      "☕"
+    ],
+    "full_text": "IPO Chart\nMesin kopi, jadi inputnya itu biji kopi gula ama air terus \nprosesnya itu mesin espressonya nyeduh kopi sama nggiling \nbaru outputnya itu kopi yang siap mu minum\nIbarat\n☕",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 55,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_55.webp",
+    "thumbnail": "/thumbnails/thumb_55.webp",
+    "lines": [
+      "IPO Chart",
+      "Input"
+    ],
+    "full_text": "IPO Chart\nInput",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 56,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_56.webp",
+    "thumbnail": "/thumbnails/thumb_56.webp",
+    "lines": [
+      "IPO Chart",
+      "Input adalah segala bahan mentah, data, atau instruksi awal yang kamu masukkan ke",
+      "dalam sistem—sama seperti saat kamu datang ke kasir, menyebutkan pesanan,",
+      "menyerahkan uang, dan meminta tingkat manis yang pas."
+    ],
+    "full_text": "IPO Chart\nInput adalah segala bahan mentah, data, atau instruksi awal yang kamu masukkan ke \ndalam sistem—sama seperti saat kamu datang ke kasir, menyebutkan pesanan, \nmenyerahkan uang, dan meminta tingkat manis yang pas.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 57,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_57.webp",
+    "thumbnail": "/thumbnails/thumb_57.webp",
+    "lines": [
+      "IPO Chart",
+      "Process"
+    ],
+    "full_text": "IPO Chart\nProcess",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 58,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_58.webp",
+    "thumbnail": "/thumbnails/thumb_58.webp",
+    "lines": [
+      "IPO Chart",
+      "Process adalah otak atau mesin di balik layar yang bekerja mengolah bahan-bahan",
+      "mentah tersebut tanpa kelihatan oleh kita—seperti barista yang mulai meracik",
+      "espresso, mengocok susu, dan mencampurkan gula aren sesuai takaran pesananmu."
+    ],
+    "full_text": "IPO Chart\nProcess adalah otak atau mesin di balik layar yang bekerja mengolah bahan-bahan \nmentah tersebut tanpa kelihatan oleh kita—seperti barista yang mulai meracik \nespresso, mengocok susu, dan mencampurkan gula aren sesuai takaran pesananmu.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 59,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_59.webp",
+    "thumbnail": "/thumbnails/thumb_59.webp",
+    "lines": [
+      "IPO Chart",
+      "Output"
+    ],
+    "full_text": "IPO Chart\nOutput",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 60,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_60.webp",
+    "thumbnail": "/thumbnails/thumb_60.webp",
+    "lines": [
+      "IPO Chart",
+      "Output adalah hasil akhir atau wujud nyata yang bisa dinikmati atau dilihat oleh",
+      "pengguna setelah semua pengolahan selesai—yang dalam kasus ini adalah",
+      "secangkir kopi susu dingin lengkap dengan struk pembayarannya yang siap",
+      "diserahkan kepadamu."
+    ],
+    "full_text": "IPO Chart\n Output adalah hasil akhir atau wujud nyata yang bisa dinikmati atau dilihat oleh \npengguna setelah semua pengolahan selesai—yang dalam kasus ini adalah \nsecangkir kopi susu dingin lengkap dengan struk pembayarannya yang siap \ndiserahkan kepadamu.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 61,
+    "title": "IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_61.webp",
+    "thumbnail": "/thumbnails/thumb_61.webp",
+    "lines": [
+      "IPO Chart",
+      "contoh"
+    ],
+    "full_text": "IPO Chart\ncontoh",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 62,
+    "title": "Study Case: Study Case IPO Chart",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_62.webp",
+    "thumbnail": "/thumbnails/thumb_62.webp",
+    "lines": [
+      "Study Case IPO Chart",
+      "Tema: Fitur Upload Foto di Medsos 📸",
+      "Buatlah rancangan IPO Chart untuk fitur posting foto di aplikasi media",
+      "sosial:",
+      "Input: Sebutkan data dan aksi dari pengguna (seperti file foto, filter,",
+      "caption, dan tombol pemicu).",
+      "Process: Sebutkan langkah backend sistem (seperti validasi file,",
+      "kompresi, penerapan filter, dan penyimpanan server).",
+      "Output: Sebutkan hasil akhirnya (seperti notifikasi sukses, foto di feed,",
+      "dan postingan di beranda teman)."
+    ],
+    "full_text": "Study Case IPO Chart\nTema: Fitur Upload Foto di Medsos 📸\n\nBuatlah rancangan IPO Chart untuk fitur posting foto di aplikasi media \nsosial:\nInput: Sebutkan data dan aksi dari pengguna (seperti file foto, filter, \ncaption, dan tombol pemicu).\nProcess: Sebutkan langkah backend sistem (seperti validasi file, \nkompresi, penerapan filter, dan penyimpanan server).\nOutput: Sebutkan hasil akhirnya (seperti notifikasi sukses, foto di feed, \ndan postingan di beranda teman).",
+    "is_study_case": true,
+    "is_answer": false
+  },
+  {
+    "id": 63,
+    "title": "Slide 63",
+    "module": "#4 IPO CHART",
+    "image": "/slides/slide_63.webp",
+    "thumbnail": "/thumbnails/thumb_63.webp",
+    "lines": [],
+    "full_text": "",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 64,
+    "title": "#5 Kayak CCTV: Cuma mantau siapa yang masuk dan bawa data apa",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_64.webp",
+    "thumbnail": "/thumbnails/thumb_64.webp",
+    "lines": [
+      "#5",
+      "Kayak CCTV: Cuma mantau siapa yang masuk dan bawa data apa",
+      "DFD Chart"
+    ],
+    "full_text": "#5\nKayak CCTV: Cuma mantau siapa yang masuk dan bawa data apa\nDFD Chart",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 65,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_65.webp",
+    "thumbnail": "/thumbnails/thumb_65.webp",
+    "lines": [
+      "DFD Chart",
+      "Definisi singkat",
+      "(Data Flow Diagram atau DFD) adalah representasi visual yang menggambarkan alur",
+      "pergerakan data dari input, proses, hingga penyimpanan dan output dalam suatu",
+      "sistem informasi.",
+      "❓❓"
+    ],
+    "full_text": "DFD Chart\nDefinisi singkat\n (Data Flow Diagram atau DFD) adalah representasi visual yang menggambarkan alur \npergerakan data dari input, proses, hingga penyimpanan dan output dalam suatu \nsistem informasi. \n❓❓",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 66,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_66.webp",
+    "thumbnail": "/thumbnails/thumb_66.webp",
+    "lines": [
+      "DFD Chart",
+      "Kayak Restoran Drive-Thru tapi ngeliat dari helikopter. Kamu",
+      "gak melihat dapur dalemnya, tapi cuma Pelanggan yang",
+      "mesen makanan di jendela depan dan Pemasok yang nganter",
+      "bahan di pintu belakang.",
+      "Ibarat",
+      "🚁"
+    ],
+    "full_text": "DFD Chart\nKayak Restoran Drive-Thru tapi ngeliat dari helikopter. Kamu \ngak melihat dapur dalemnya, tapi cuma Pelanggan yang \nmesen makanan di jendela depan dan Pemasok yang nganter \nbahan di pintu belakang.\nIbarat\n🚁",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 67,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_67.webp",
+    "thumbnail": "/thumbnails/thumb_67.webp",
+    "lines": [
+      "DFD Chart",
+      "Symbol - symbol",
+      "DFD Chart level 0",
+      "🧩"
+    ],
+    "full_text": "DFD Chart\nSymbol - symbol\nDFD Chart level 0\n🧩",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 68,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_68.webp",
+    "thumbnail": "/thumbnails/thumb_68.webp",
+    "lines": [
+      "DFD Chart",
+      "1 st"
+    ],
+    "full_text": "DFD Chart\n1 st",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 69,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_69.webp",
+    "thumbnail": "/thumbnails/thumb_69.webp",
+    "lines": [
+      "DFD Chart",
+      "Rectangle/Persegi Panjang",
+      "Real namenya: External entity",
+      "Fungsinya: Dia adalah pengguna/aktor/pihak luar yang make",
+      "sistem atau program yang kalian buat."
+    ],
+    "full_text": "DFD Chart\nRectangle/Persegi Panjang\nReal namenya: External entity\nFungsinya: Dia adalah pengguna/aktor/pihak luar yang make \nsistem atau program yang kalian buat.",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 70,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_70.webp",
+    "thumbnail": "/thumbnails/thumb_70.webp",
+    "lines": [
+      "DFD Chart",
+      "2 nd"
+    ],
+    "full_text": "DFD Chart\n2 nd",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 71,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_71.webp",
+    "thumbnail": "/thumbnails/thumb_71.webp",
+    "lines": [
+      "DFD Chart",
+      "Lingkaran/Oval/Circle",
+      "Real namenya: Process",
+      "Fungsinya: Sistem utama punya kalian yang udah dibuat jadi",
+      "misal online shop/apapun nama aplikasi kalian"
+    ],
+    "full_text": "DFD Chart\nLingkaran/Oval/Circle\nReal namenya: Process\nFungsinya: Sistem utama punya kalian yang udah dibuat jadi \nmisal online shop/apapun nama aplikasi kalian",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 72,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_72.webp",
+    "thumbnail": "/thumbnails/thumb_72.webp",
+    "lines": [
+      "DFD Chart",
+      "3rd"
+    ],
+    "full_text": "DFD Chart\n3rd",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 73,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_73.webp",
+    "thumbnail": "/thumbnails/thumb_73.webp",
+    "lines": [
+      "DFD Chart",
+      "Arrow/Tanda panah",
+      "Real namenya: Data flow",
+      "Fungsinya: Ya ini yaitu arah penunjuk dari flow kalian tapi biasa",
+      "di tengah ada penjelasan singkat tentang arahnya"
+    ],
+    "full_text": "DFD Chart\nArrow/Tanda panah\nReal namenya: Data flow\nFungsinya: Ya ini yaitu arah penunjuk dari flow kalian tapi biasa \ndi tengah ada penjelasan singkat tentang arahnya",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 74,
+    "title": "DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_74.webp",
+    "thumbnail": "/thumbnails/thumb_74.webp",
+    "lines": [
+      "DFD Chart",
+      "contoh"
+    ],
+    "full_text": "DFD Chart\ncontoh",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 75,
+    "title": "Study Case: Study Case DFD Chart",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_75.webp",
+    "thumbnail": "/thumbnails/thumb_75.webp",
+    "lines": [
+      "Study Case DFD Chart",
+      "Tema: Portal Seleksi Beasiswa  🎓",
+      "Buatlah rancangan DFD Level 0 (Context Diagram) untuk sistem beasiswa",
+      "terpadu yang menghubungkan 4 entitas luar:",
+      "Mahasiswa: Mengirim berkas & data rekening, menerima kartu ujian &",
+      "status kelulusan.",
+      "Tim Seleksi: Menginput kriteria, nilai tes, dan menerima draf",
+      "keputusan.",
+      "Sistem Bank (API): Menerima data rekening pendaftar dan",
+      "mengirimkan verifikasi status pencairan dana.",
+      "Rektorat: Menerima laporan akhir dan memberikan surat persetujuan",
+      "(SK) beasiswa."
+    ],
+    "full_text": "Study Case DFD Chart\nTema: Portal Seleksi Beasiswa  🎓\n\nBuatlah rancangan DFD Level 0 (Context Diagram) untuk sistem beasiswa \nterpadu yang menghubungkan 4 entitas luar:\nMahasiswa: Mengirim berkas & data rekening, menerima kartu ujian & \nstatus kelulusan.\nTim Seleksi: Menginput kriteria, nilai tes, dan menerima draf \nkeputusan.\nSistem Bank (API): Menerima data rekening pendaftar dan \nmengirimkan verifikasi status pencairan dana.\nRektorat: Menerima laporan akhir dan memberikan surat persetujuan \n(SK) beasiswa.",
+    "is_study_case": true,
+    "is_answer": false
+  },
+  {
+    "id": 76,
+    "title": "Slide 76",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_76.webp",
+    "thumbnail": "/thumbnails/thumb_76.webp",
+    "lines": [],
+    "full_text": "",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 77,
+    "title": "Nanya gak??",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_77.webp",
+    "thumbnail": "/thumbnails/thumb_77.webp",
+    "lines": [
+      "Nanya gak??"
+    ],
+    "full_text": "Nanya gak??",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 78,
+    "title": "Arigatou",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_78.webp",
+    "thumbnail": "/thumbnails/thumb_78.webp",
+    "lines": [
+      "Arigatou"
+    ],
+    "full_text": "Arigatou",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 79,
+    "title": "Jangan kapok",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_79.webp",
+    "thumbnail": "/thumbnails/thumb_79.webp",
+    "lines": [
+      "Jangan kapok",
+      "pesen lagi hehe"
+    ],
+    "full_text": "Jangan kapok \npesen lagi hehe",
+    "is_study_case": false,
+    "is_answer": false
+  },
+  {
+    "id": 80,
+    "title": "foreal.dsgn",
+    "module": "#5 DFD CHART",
+    "image": "/slides/slide_80.webp",
+    "thumbnail": "/thumbnails/thumb_80.webp",
+    "lines": [
+      "foreal.dsgn"
+    ],
+    "full_text": "foreal.dsgn",
+    "is_study_case": false,
+    "is_answer": false
+  }
+]

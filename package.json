@@ -1,0 +1,15 @@
+{
+  "name": "pdm-mentoring-presentation",
+  "version": "1.0.0",
+  "description": "PDM Mentoring Midterm Based Learning 80-Slide Interactive Presentation",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3456",
+    "build": "node scripts/encrypt-vault.js && vite build",
+    "preview": "vite preview --port 3456",
+    "set-pin": "node scripts/encrypt-vault.js"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}
