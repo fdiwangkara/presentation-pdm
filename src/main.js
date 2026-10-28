@@ -105,20 +105,40 @@ class PdmApp {
       });
     }
 
-    // Fullscreen toggle & change listeners (Game mode)
+    // Fullscreen toggle & change listeners
     document.getElementById('btnFullscreen')?.addEventListener('click', () => this.toggleFullscreen());
-    document.getElementById('btnFsExit')?.addEventListener('click', () => this.toggleFullscreen());
     document.addEventListener('fullscreenchange', () => this.handleFullscreenChange());
     document.addEventListener('webkitfullscreenchange', () => this.handleFullscreenChange());
 
-    // When phone is naturally held horizontal, exit virtual rotation
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > window.innerHeight) {
-        const viewer = document.getElementById('slideViewer');
-        viewer?.classList.remove('game-mode-landscape');
-        document.body.classList.remove('in-game-landscape');
+    // Auto-hide HUD activity listener in fullscreen
+    const resetHudTimer = () => {
+      const viewer = document.getElementById('slideViewer');
+      if (!viewer?.classList.contains('in-fullscreen')) return;
+      viewer.classList.add('show-hud');
+      clearTimeout(this.hudTimeout);
+      this.hudTimeout = setTimeout(() => {
+        viewer.classList.remove('show-hud');
+      }, 2500);
+    };
+    window.addEventListener('mousemove', resetHudTimer);
+    window.addEventListener('touchstart', resetHudTimer, { passive: true });
+
+    // Touch swipe navigation for mobile / touch devices
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const stage = document.querySelector('.slide-stage');
+    stage?.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    stage?.addEventListener('touchend', (e) => {
+      const diffX = e.changedTouches[0].screenX - touchStartX;
+      const diffY = e.changedTouches[0].screenY - touchStartY;
+      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0) this.next();
+        else this.prev();
       }
-    });
+    }, { passive: true });
 
     // Lock
     document.getElementById('btnLock')?.addEventListener('click', () => this.lock());
@@ -300,53 +320,24 @@ class PdmApp {
   next() { this.goTo(this.currentIndex + 1); }
 
   async toggleFullscreen() {
-    const viewer = document.getElementById('slideViewer');
-    const isVirtual = viewer?.classList.contains('game-mode-landscape');
-    const isNativeFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
-
-    if (isVirtual || isNativeFs) {
-      this.exitFullscreenMode();
-      return;
-    }
-
-    const isPortrait = window.innerHeight > window.innerWidth;
-    let orientationLocked = false;
-
-    // 1. Try native fullscreen (Android / Desktop)
-    const el = document.documentElement;
-    try {
-      if (el.requestFullscreen) {
-        await el.requestFullscreen();
-      } else if (el.webkitRequestFullscreen) {
-        await el.webkitRequestFullscreen();
-      }
-    } catch (err) {}
-
-    // 2. Try Screen Orientation API (Android Chrome / modern web apps)
-    if (screen.orientation && screen.orientation.lock) {
+    const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+    if (!isFs) {
+      const el = document.documentElement;
       try {
-        await screen.orientation.lock('landscape');
-        orientationLocked = true;
-      } catch (err) {}
-    }
-
-    // 3. Universal Fallback for iOS / Mobile portrait where orientation lock API is restricted:
-    // Rotate into game-mode landscape via CSS transform
-    if (isPortrait && !orientationLocked) {
-      viewer?.classList.add('game-mode-landscape');
-      document.body.classList.add('in-game-landscape');
+        if (el.requestFullscreen) {
+          await el.requestFullscreen();
+        } else if (el.webkitRequestFullscreen) {
+          await el.webkitRequestFullscreen();
+        }
+      } catch (err) {
+        console.warn('Fullscreen request failed:', err);
+      }
+    } else {
+      this.exitFullscreenMode();
     }
   }
 
   exitFullscreenMode() {
-    const viewer = document.getElementById('slideViewer');
-    viewer?.classList.remove('game-mode-landscape');
-    document.body.classList.remove('in-game-landscape');
-
-    if (screen.orientation && screen.orientation.unlock) {
-      try { screen.orientation.unlock(); } catch (err) {}
-    }
-
     if (document.fullscreenElement || document.webkitFullscreenElement) {
       if (document.exitFullscreen) {
         document.exitFullscreen().catch(() => {});
@@ -359,15 +350,29 @@ class PdmApp {
   handleFullscreenChange() {
     const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
     document.body.classList.toggle('in-fullscreen', isFs);
-    document.getElementById('slideViewer')?.classList.toggle('in-fullscreen', isFs);
+    const viewer = document.getElementById('slideViewer');
+    viewer?.classList.toggle('in-fullscreen', isFs);
 
-    if (!isFs) {
-      const viewer = document.getElementById('slideViewer');
-      viewer?.classList.remove('game-mode-landscape');
-      document.body.classList.remove('in-game-landscape');
-      if (screen.orientation && screen.orientation.unlock) {
-        try { screen.orientation.unlock(); } catch (err) {}
-      }
+    // Update fullscreen button icon and tooltip
+    const btnFs = document.getElementById('btnFullscreen');
+    if (btnFs) {
+      btnFs.title = isFs ? 'Keluar Fullscreen (Esc / F)' : 'Fullscreen (F)';
+      btnFs.innerHTML = isFs
+        ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+             <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
+           </svg>`
+        : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+             <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+           </svg>`;
+    }
+
+    // Trigger brief HUD reveal when entering fullscreen so user sees how to exit
+    if (isFs && viewer) {
+      viewer.classList.add('show-hud');
+      clearTimeout(this.hudTimeout);
+      this.hudTimeout = setTimeout(() => {
+        viewer.classList.remove('show-hud');
+      }, 2500);
     }
   }
 
