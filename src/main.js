@@ -53,23 +53,26 @@ class PdmApp {
       });
     }
 
-    // Physical & virtual keyboard input
+    // Physical & touch keyboard input
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
     const hiddenInput = document.getElementById('pinHiddenInput');
     const pinGate = document.getElementById('pinGate');
-    const pinDisplay = document.getElementById('pinDisplay');
     const passcodeCard = document.getElementById('passcodeCard');
+    const pinDisplay = document.getElementById('pinDisplay');
 
-    const focusInput = () => {
-      if (pinGate?.classList.contains('active')) {
-        hiddenInput?.focus();
-      }
-    };
-
-    // Auto-focus immediately and on any card/gate click
-    focusInput();
-    pinGate?.addEventListener('click', focusInput);
-    passcodeCard?.addEventListener('click', focusInput);
-    pinDisplay?.addEventListener('click', focusInput);
+    // On touch devices (HP / tablet), disable virtual keyboard pop-up completely
+    if (isTouch && hiddenInput) {
+      hiddenInput.setAttribute('inputmode', 'none');
+      hiddenInput.setAttribute('tabindex', '-1');
+    } else if (!isTouch) {
+      // Only desktop with physical keyboard focuses input
+      const focusDesktop = () => {
+        if (pinGate?.classList.contains('active')) hiddenInput?.focus();
+      };
+      pinGate?.addEventListener('click', focusDesktop);
+      passcodeCard?.addEventListener('click', focusDesktop);
+      pinDisplay?.addEventListener('click', focusDesktop);
+    }
 
     if (hiddenInput) {
       hiddenInput.addEventListener('input', (e) => {
@@ -102,8 +105,9 @@ class PdmApp {
       });
     }
 
-    // Fullscreen toggle & change listeners
+    // Fullscreen toggle & change listeners (Game mode)
     document.getElementById('btnFullscreen')?.addEventListener('click', () => this.toggleFullscreen());
+    document.getElementById('btnFsExit')?.addEventListener('click', () => this.toggleFullscreen());
     document.addEventListener('fullscreenchange', () => this.handleFullscreenChange());
     document.addEventListener('webkitfullscreenchange', () => this.handleFullscreenChange());
 
@@ -286,19 +290,32 @@ class PdmApp {
   prev() { this.goTo(this.currentIndex - 1); }
   next() { this.goTo(this.currentIndex + 1); }
 
-  toggleFullscreen() {
-    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen().catch(() => {});
-      } else if (document.documentElement.webkitRequestFullscreen) {
-        document.documentElement.webkitRequestFullscreen();
-      }
+  async toggleFullscreen() {
+    const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+    if (!isFs) {
+      try {
+        const el = document.documentElement;
+        if (el.requestFullscreen) {
+          await el.requestFullscreen();
+        } else if (el.webkitRequestFullscreen) {
+          await el.webkitRequestFullscreen();
+        }
+        // Mobile Game Mode: lock orientation to landscape
+        if (screen.orientation && screen.orientation.lock) {
+          await screen.orientation.lock('landscape').catch(() => {});
+        }
+      } catch (err) {}
     } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      }
+      try {
+        if (screen.orientation && screen.orientation.unlock) {
+          try { screen.orientation.unlock(); } catch {}
+        }
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          await document.webkitExitFullscreen();
+        }
+      } catch (err) {}
     }
   }
 
@@ -306,6 +323,10 @@ class PdmApp {
     const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
     document.body.classList.toggle('in-fullscreen', isFs);
     document.getElementById('slideViewer')?.classList.toggle('in-fullscreen', isFs);
+
+    if (!isFs && screen.orientation && screen.orientation.unlock) {
+      try { screen.orientation.unlock(); } catch {}
+    }
   }
 
   lock() {
@@ -326,22 +347,18 @@ class PdmApp {
   }
 
   onKeyDown(e) {
-    // If PIN gate is active, make sure keyboard input is routed smoothly
+    // If PIN gate is active, route desktop typing directly
     const gate = document.getElementById('pinGate');
     if (gate?.classList.contains('active')) {
-      const hiddenInput = document.getElementById('pinHiddenInput');
-      if (document.activeElement !== hiddenInput) {
-        hiddenInput?.focus();
-        if (/^[0-9]$/.test(e.key)) {
-          e.preventDefault();
-          this.appendDigit(e.key);
-        } else if (e.key === 'Backspace') {
-          e.preventDefault();
-          this.backspace();
-        } else if (e.key === 'Enter') {
-          e.preventDefault();
-          this.tryUnlock();
-        }
+      if (/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+        this.appendDigit(e.key);
+      } else if (e.key === 'Backspace') {
+        e.preventDefault();
+        this.backspace();
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        this.tryUnlock();
       }
       return;
     }

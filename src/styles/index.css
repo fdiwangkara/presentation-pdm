@@ -275,7 +275,7 @@ html, body {
   opacity: 0.85;
 }
 
-/* Fullscreen Mode: Automatically hide header completely for 100% immersive slides */
+/* Fullscreen Mode: Automatically hide header completely for 100% immersive game-like slides */
 :fullscreen .viewer-header,
 :-webkit-full-screen .viewer-header,
 .slide-viewer.in-fullscreen .viewer-header,
@@ -287,9 +287,93 @@ body.in-fullscreen .viewer-header {
 :-webkit-full-screen .slide-stage,
 .slide-viewer.in-fullscreen .slide-stage,
 body.in-fullscreen .slide-stage {
-  height: 100vh;
-  max-height: 100vh;
-  padding: 0;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #000000;
+}
+
+:fullscreen .slide-frame,
+:-webkit-full-screen .slide-frame,
+.slide-viewer.in-fullscreen .slide-frame,
+body.in-fullscreen .slide-frame {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent;
+}
+
+:fullscreen .slide-image,
+:-webkit-full-screen .slide-image,
+.slide-viewer.in-fullscreen .slide-image,
+body.in-fullscreen .slide-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Floating Exit Fullscreen Button in Game Mode */
+.floating-fs-exit {
+  display: none;
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 999;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(18, 70, 162, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, transform 0.2s, background 0.2s;
+  opacity: 0.4;
+}
+
+.floating-fs-exit:hover,
+.floating-fs-exit:active {
+  opacity: 1;
+  transform: scale(1.08);
+  background: rgba(18, 70, 162, 0.95);
+}
+
+:fullscreen .floating-fs-exit,
+:-webkit-full-screen .floating-fs-exit,
+.slide-viewer.in-fullscreen .floating-fs-exit,
+body.in-fullscreen .floating-fs-exit {
+  display: flex;
+}
+
+/* Mobile Landscape Mode (behaves like a mobile game orientation) */
+@media (orientation: landscape) and (max-height: 540px) {
+  .viewer-header {
+    display: none !important;
+  }
+  .slide-stage {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    padding: 0 !important;
+    background: #000000;
+  }
+  .slide-frame {
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .slide-image {
+    object-fit: contain !important;
+  }
 }
 
 .text-lime { color: var(--lime); }
